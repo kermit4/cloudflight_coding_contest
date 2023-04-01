@@ -1,0 +1,737 @@
+ 2637  2023-03-31 13:03:42 GMT (Fri) _start_
+ 2638  2023-03-31 13:03:49 GMT (Fri) ln -s ../downloads .
+ 2639  2023-03-31 13:03:53 GMT (Fri) unzip downloads/level1.zip 
+ 2640  2023-03-31 13:03:57 GMT (Fri) v
+ 2641  2023-03-31 13:03:58 GMT (Fri) l *
+ 2642  2023-03-31 13:05:39 GMT (Fri) v
+ 2643  2023-03-31 13:06:31 GMT (Fri) tr RPS 012 level1_1.in 
+ 2644* 2023-03-31 13:06:33 GMT (Fri) ,
+ 2645  2023-03-31 13:10:41 GMT (Fri) awk '/R/&&!/P/{print "R"}/S/&&!/R/{print "S"}/P/&&!/S/{print "P"}' < level1_1.in 
+ 2646  2023-03-31 13:11:17 GMT (Fri) less level1_example.out 
+ 2647  2023-03-31 13:11:20 GMT (Fri) ls -l
+ 2648  2023-03-31 13:11:23 GMT (Fri) for f in {1..5};do awk 'FNR==1{next}/R/&&!/P/{print "R"}/S/&&!/R/{print "S"}/P/&&!/S/{print "P"}' <  level1_$a.in > level1_$a.out;done
+ 2649  2023-03-31 13:11:34 GMT (Fri) for a in {1..5};do awk 'FNR==1{next}/R/&&!/P/{print "R"}/S/&&!/R/{print "S"}/P/&&!/S/{print "P"}' <  level1_$a.in > level1_$a.out;done
+ 2650  2023-03-31 13:11:57 GMT (Fri) mv *out* downloads
+ 2651  2023-03-31 13:12:55 GMT (Fri) pwd
+ 2652  2023-03-31 13:15:07 GMT (Fri) df
+ 2653  2023-03-31 13:15:14 GMT (Fri) ls -l /sdcard
+ 2654  2023-03-31 13:15:14 GMT (Fri) ls -l /sdcard/
+ 2655  2023-03-31 13:15:28 GMT (Fri) mv downloads/level1*out /sdcard/
+ 2656  2023-03-31 13:19:34 GMT (Fri) vim rps.awk
+ 2657  2023-03-31 13:20:20 GMT (Fri) wc level*
+ 2658  2023-03-31 13:20:29 GMT (Fri) wc /sdcard/level*
+ 2659  2023-03-31 13:20:35 GMT (Fri) vim rps.awk
+ 2660  2023-03-31 13:20:40 GMT (Fri) cp -p /sdcard/level* .
+ 2661  2023-03-31 13:20:50 GMT (Fri) cp -p rps.awk /sdcard/
+ 2662  2023-03-31 13:20:54 GMT (Fri) chmod rps.awk 
+ 2663  2023-03-31 13:20:59 GMT (Fri) chmod +x rps.awk 
+ 2664  2023-03-31 13:21:05 GMT (Fri) ./rps.awk  < level1_1.out 
+ 2665  2023-03-31 13:21:06 GMT (Fri) ./rps.awk  < level1_1.out |wc
+ 2666  2023-03-31 13:21:08 GMT (Fri) ./rps.awk  < level1_1.in 
+ 2667  2023-03-31 13:21:20 GMT (Fri) ls -l
+ 2668  2023-03-31 13:21:24 GMT (Fri) ./rps.awk  < level1_1.in |diff - level1_1.out 
+ 2669  2023-03-31 13:23:51 GMT (Fri) mv downloads/level2.zip-]  downloads/level2.zip
+ 2670  2023-03-31 13:23:52 GMT (Fri) unzip downloads/level2.zip
+ 2671  2023-03-31 13:23:57 GMT (Fri) less level2_*
+ 2672  2023-03-31 13:26:57 GMT (Fri) cp -p rps.awk rps2.awk
+ 2673  2023-03-31 13:26:58 GMT (Fri) vim rps2.awk
+ 2674  2023-03-31 13:32:22 GMT (Fri) c rps.awk 
+ 2675  2023-03-31 13:33:11 GMT (Fri) fg
+ 2676  2023-03-31 13:37:02 GMT (Fri) man gawk
+ 2677  2023-03-31 13:37:20 GMT (Fri) fg
+ 2678  2023-03-31 13:37:22 GMT (Fri) man gawk
+ 2679  2023-03-31 13:37:30 GMT (Fri) fg
+ 2680  2023-03-31 13:38:25 GMT (Fri) ./rps2.awk 
+ 2681  2023-03-31 13:38:27 GMT (Fri) fg
+ 2682  2023-03-31 13:38:31 GMT (Fri) ./rps2.awk 
+ 2683  2023-03-31 13:38:36 GMT (Fri) fg
+ 2684  2023-03-31 13:38:46 GMT (Fri) ./rps2.awk 
+ 2685  2023-03-31 13:38:47 GMT (Fri) fg
+ 2686  2023-03-31 13:39:12 GMT (Fri) ./rps2.awk 
+ 2687  2023-03-31 13:39:14 GMT (Fri) fg
+ 2688  2023-03-31 13:39:17 GMT (Fri) ./rps2.awk 
+ 2689  2023-03-31 13:39:19 GMT (Fri) fg
+ 2690  2023-03-31 13:39:27 GMT (Fri) ./rps2.awk 
+ 2691  2023-03-31 13:39:43 GMT (Fri) cat > e
+ 2692  2023-03-31 13:39:49 GMT (Fri) vim e
+ 2693  2023-03-31 13:40:03 GMT (Fri) ./rps2.awk  < e
+ 2694  2023-03-31 13:40:05 GMT (Fri) vim e
+ 2695  2023-03-31 13:40:12 GMT (Fri) fg
+ 2696  2023-03-31 13:40:18 GMT (Fri) ./rps2.awk  < e
+ 2697  2023-03-31 13:40:20 GMT (Fri) fg
+ 2698  2023-03-31 13:40:30 GMT (Fri) ./rps2.awk  < e
+ 2699  2023-03-31 13:40:40 GMT (Fri) fg
+ 2700  2023-03-31 13:41:09 GMT (Fri) ./rps2.awk  < e
+ 2701  2023-03-31 13:41:11 GMT (Fri) ./rps2.awk  < e|less
+ 2702  2023-03-31 13:41:13 GMT (Fri) fg
+ 2703  2023-03-31 13:41:28 GMT (Fri) ./rps2.awk  < e|less
+ 2704  2023-03-31 13:41:34 GMT (Fri) ./rps2.awk  < e
+ 2705  2023-03-31 13:41:40 GMT (Fri) fg
+ 2706  2023-03-31 13:42:00 GMT (Fri) ./rps2.awk  < e
+ 2707  2023-03-31 13:42:02 GMT (Fri) ./rps2.awk  < e|l
+ 2708  2023-03-31 13:42:29 GMT (Fri) fg
+ 2709  2023-03-31 13:43:15 GMT (Fri) ./rps2.awk  < e|l
+ 2710  2023-03-31 13:43:45 GMT (Fri) fg
+ 2711  2023-03-31 13:43:53 GMT (Fri) ./rps2.awk  < e|l
+ 2712  2023-03-31 13:44:05 GMT (Fri) fg
+ 2713  2023-03-31 13:44:20 GMT (Fri) ./rps2.awk  < e|l
+ 2714  2023-03-31 13:44:29 GMT (Fri) fg
+ 2715  2023-03-31 13:45:03 GMT (Fri) ./rps2.awk  < e|l
+ 2716  2023-03-31 13:45:08 GMT (Fri) fg
+ 2717  2023-03-31 13:45:11 GMT (Fri) ls -l
+ 2718  2023-03-31 13:45:33 GMT (Fri) l=2;for a in {1..5};do awk 'FNR==1{next}/R/&&!/P/{print "R"}/S/&&!/R/{print "S"}/P/&&!/S/{print "P"}' <  level2_$a.in > level2_$a.out;done;cp 
+ 2719  2023-03-31 13:45:46 GMT (Fri) l=2;for a in {1..5};do awk 'FNR==1{next}/R/&&!/P/{print "R"}/S/&&!/R/{print "S"}/P/&&!/S/{print "P"}' <  level2_$a.in > level2_$a.out;cp level2_$a.out /sdcard/;done
+ 2720  2023-03-31 13:45:50 GMT (Fri) cp rps2.awk /sdcard/
+ 2721  2023-03-31 13:45:52 GMT (Fri) v -t
+ 2722  2023-03-31 13:45:53 GMT (Fri) v -tr
+ 2723  2023-03-31 13:45:57 GMT (Fri) ls -l
+ 2724  2023-03-31 13:46:09 GMT (Fri) ./rps2.awk  < level2_example.in |diff level2_example.out
+ 2725  2023-03-31 13:46:11 GMT (Fri) ./rps2.awk  < level2_example.in |diff - level2_example.out
+ 2726  2023-03-31 13:46:19 GMT (Fri) ./rps2.awk  < level2_example.in 
+ 2727  2023-03-31 13:46:24 GMT (Fri) cat 
+ 2728  2023-03-31 13:46:26 GMT (Fri) cat level2_example.in 
+ 2729  2023-03-31 13:46:31 GMT (Fri) fg
+ 2730  2023-03-31 13:46:33 GMT (Fri) vim rps2.awk
+ 2731  2023-03-31 13:46:39 GMT (Fri) vim level2_example.in 
+ 2732  2023-03-31 13:46:42 GMT (Fri) fg
+ 2733* 2023-03-31 13:46:55 GMT (Fri) cat 
+ 2734  2023-03-31 13:46:58 GMT (Fri) ./rps2.awk 
+ 2735  2023-03-31 13:47:09 GMT (Fri) ./rps2.awk < level2_example.in 
+ 2736  2023-03-31 13:47:12 GMT (Fri) cat level2_example.in |./rps2.awk 
+ 2737  2023-03-31 13:47:15 GMT (Fri) xxd level2_example.in 
+ 2738  2023-03-31 13:47:42 GMT (Fri) l=2;for a in {1..5};do tr -d \\r < level2_$a.in;awk 'FNR==1{next}/R/&&!/P/{print "R"}/S/&&!/R/{print "S"}/P/&&!/S/{print "P"}'  > level2_$a.out;cp level2_$a.out /sdcard/;done
+ 2739  2023-03-31 13:47:49 GMT (Fri) l=2;for a in {1..5};do tr -d \\r < level2_$a.in|awk 'FNR==1{next}/R/&&!/P/{print "R"}/S/&&!/R/{print "S"}/P/&&!/S/{print "P"}'  > level2_$a.out;cp level2_$a.out /sdcard/;done
+ 2740  2023-03-31 13:48:02 GMT (Fri) tr -d \\r <level2_example.in |./rps2.awk 
+ 2741  2023-03-31 13:48:04 GMT (Fri) tr -d \\r <level2_example.in |./rps2.awk |diff - level2_example.out 
+ 2742  2023-03-31 13:51:56 GMT (Fri) tr -d \\r <level2_example.in |./rps2.awk |diff - <(tr -d \\r < level2_example.out )
+ 2743  2023-03-31 13:52:52 GMT (Fri) vim level2_1.*
+ 2744  2023-03-31 13:52:58 GMT (Fri) ls -l level2_1.*
+ 2745  2023-03-31 13:53:01 GMT (Fri) l=2;for a in {1..5};do tr -d \\r < level2_$a.in|awk 'FNR==1{next}/R/&&!/P/{print "R"}/S/&&!/R/{print "S"}/P/&&!/S/{print "P"}'  > level2_$a.out;cp level2_$a.out /sdcard/;done
+ 2746  2023-03-31 13:53:05 GMT (Fri) ls -trl
+ 2747  2023-03-31 13:53:09 GMT (Fri) less level2_1.*
+ 2748  2023-03-31 13:53:18 GMT (Fri) xxd level2_1.*|les
+ 2749  2023-03-31 13:53:19 GMT (Fri) xxd level2_1.*|l
+ 2750  2023-03-31 13:53:24 GMT (Fri) xxd level2_1.in 
+ 2751  2023-03-31 13:53:27 GMT (Fri) xxd level2_1.in |l
+ 2752  2023-03-31 13:53:35 GMT (Fri) tr -d \\r < level2_1.in|rpc2
+ 2753  2023-03-31 13:53:38 GMT (Fri) tr -d \\r < level2_1.in|./rpc2
+ 2754  2023-03-31 13:53:44 GMT (Fri) tr -d \\r < level2_1.in|./rps2.awk 
+ 2755  2023-03-31 13:53:57 GMT (Fri) l=2;for a in {1..5};do tr -d \\r < level2_$a.in|./rps2.awk  > level2_$a.out;cp level2_$a.out /sdcard/;done
+ 2756  2023-03-31 13:54:02 GMT (Fri) v
+ 2757  2023-03-31 13:55:10 GMT (Fri) cp -p rps2.awk /sdcard/
+ 2758  2023-03-31 13:55:32 GMT (Fri) xxd level1_1.in 
+ 2759  2023-03-31 13:55:43 GMT (Fri) tr -d \\r <level2_example.in |./rps2.awk |diff - <(tr -d \\r < level2_example.out )
+ 2760  2023-03-31 13:55:49 GMT (Fri) cat level2_example.in |./rps2.awk |diff - <(tr -d \\r < level2_example.out )
+ 2761  2023-03-31 13:55:51 GMT (Fri) vim rps2.awk 
+ 2762  2023-03-31 13:55:53 GMT (Fri) fg
+ 2763  2023-03-31 13:56:09 GMT (Fri) cat level2_example.in |./rps2.awk |diff - <(tr -d \\r < level2_example.out )
+ 2764  2023-03-31 13:56:12 GMT (Fri) cp -p rps2.awk /sdcard/
+ 2765  2023-03-31 13:57:06 GMT (Fri) unzip downloads/level3.zip 
+ 2766  2023-03-31 14:00:24 GMT (Fri) less level3_*in
+ 2767  2023-03-31 14:03:38 GMT (Fri) cp -p rps2.awk  rps3.awk
+ 2768  2023-03-31 14:03:40 GMT (Fri) vim rps3.awk
+ 2769  2023-03-31 14:04:16 GMT (Fri) ls -l level2_1.*
+ 2770  2023-03-31 14:04:19 GMT (Fri) l level3*
+ 2771  2023-03-31 14:04:34 GMT (Fri) cat level3*|tr -d 0-9 
+ 2772  2023-03-31 14:04:36 GMT (Fri) cat level3*|tr -d 0-9\ 
+ 2773  2023-03-31 14:04:39 GMT (Fri) cat level3*|tr -d 0-9\ |snuiq
+ 2774  2023-03-31 14:04:52 GMT (Fri) cat level3*in|tr -d 0-9\ |snuiq
+ 2775  2023-03-31 14:04:54 GMT (Fri) fg
+ 2776  2023-03-31 14:04:55 GMT (Fri) cat level3*in|tr -d 0-9\ |snuiq
+ 2777  2023-03-31 14:05:01 GMT (Fri) fg
+ 2778  2023-03-31 14:05:13 GMT (Fri) cat level3*in|tr -d 0-9\ |snuiq
+ 2779  2023-03-31 14:05:14 GMT (Fri) fg
+ 2780  2023-03-31 14:05:39 GMT (Fri) cat level3*in|tr -d 0-9\ |snuiq
+ 2781  2023-03-31 14:05:40 GMT (Fri) fg
+ 2782  2023-03-31 14:09:39 GMT (Fri) cat level3_example.in |./rps3.awk 
+ 2783  2023-03-31 14:09:44 GMT (Fri) cat level3_example.out 
+ 2784  2023-03-31 14:09:49 GMT (Fri) fg
+ 2785  2023-03-31 14:10:06 GMT (Fri) cat level3_example.out 
+ 2786  2023-03-31 14:10:21 GMT (Fri) fg
+ 2787  2023-03-31 14:10:27 GMT (Fri) cat level3_example.out 
+ 2788  2023-03-31 14:10:34 GMT (Fri) cat level3_example.out |./rps3.awk 
+ 2789  2023-03-31 14:10:39 GMT (Fri) cat level3_example.in |./rps3.awk 
+ 2790  2023-03-31 14:10:54 GMT (Fri) (echo ;cat level3_example.in |./rps3.awk) |./rps2.awk 
+ 2791  2023-03-31 14:11:18 GMT (Fri) fg
+ 2792  2023-03-31 14:11:20 GMT (Fri) (echo ;cat level3_example.in |./rps3.awk) |./rps2.awk 
+ 2793  2023-03-31 14:11:27 GMT (Fri) (echo ;cat level3_example.in |./rps3.awk) 
+ 2794  2023-03-31 14:11:31 GMT (Fri) (echo ;cat level3_example.in ) 
+ 2795  2023-03-31 14:11:42 GMT (Fri) (echo ;cat level3_example.in |./rps3.awk) 
+ 2796  2023-03-31 14:11:52 GMT (Fri) fg
+ 2797  2023-03-31 14:12:37 GMT (Fri) (echo ;cat level3_example.in |./rps3.awk) 
+ 2798  2023-03-31 14:12:42 GMT (Fri) (echo ;cat level3_example.in |./rps3.awk) |./rps2.awk 
+ 2799  2023-03-31 14:12:46 GMT (Fri) (echo ;cat level3_example.in |./rps3.awk) 
+ 2800  2023-03-31 14:12:59 GMT (Fri) fg
+ 2801  2023-03-31 14:13:02 GMT (Fri) (echo ;cat level3_example.in |./rps3.awk) 
+ 2802  2023-03-31 14:13:04 GMT (Fri) (echo ;cat level3_example.in )
+ 2803  2023-03-31 14:13:42 GMT (Fri) fg
+ 2804  2023-03-31 14:14:21 GMT (Fri) (echo ;cat level3_example.in |./rps3.awk) 
+ 2805  2023-03-31 14:14:23 GMT (Fri) fg
+ 2806  2023-03-31 14:14:44 GMT (Fri) (echo ;cat level3_example.in |./rps3.awk) 
+ 2807  2023-03-31 14:14:49 GMT (Fri) fg
+ 2808  2023-03-31 14:14:52 GMT (Fri) (echo ;cat level3_example.in |./rps3.awk) 
+ 2809  2023-03-31 14:14:54 GMT (Fri) fg
+ 2810  2023-03-31 14:15:12 GMT (Fri) cat level2_example.in |./rps2.awk |diff - <(tr -d \\r < level2_example.out )
+ 2811  2023-03-31 14:15:15 GMT (Fri) (echo ;cat level3_example.in |./rps3.awk) 
+ 2812  2023-03-31 14:15:22 GMT (Fri) (echo ;cat level3_example.in )
+ 2813  2023-03-31 14:15:24 GMT (Fri) fg
+ 2814  2023-03-31 14:15:49 GMT (Fri) (echo ;cat level3_example.in |./rps3.awk) 
+ 2815  2023-03-31 14:15:56 GMT (Fri) cat level3_example.out 
+ 2816  2023-03-31 14:16:02 GMT (Fri) (echo ;cat level3_example.in |./rps3.awk) |./rps2.awk 
+ 2817  2023-03-31 14:16:17 GMT (Fri) fg
+ 2818  2023-03-31 14:16:58 GMT (Fri) (echo ;cat level3_example.in |./rps3.awk) |./rps2.awk 
+ 2819  2023-03-31 14:17:01 GMT (Fri) (echo ;cat level3_example.in |./rps3.awk) 
+ 2820  2023-03-31 14:17:06 GMT (Fri) fg
+ 2821  2023-03-31 14:17:33 GMT (Fri) less level3_example.in 
+ 2822  2023-03-31 14:17:40 GMT (Fri) fg
+ 2823  2023-03-31 14:18:12 GMT (Fri) (echo ;cat level3_example.in |./rps3.awk) 
+ 2824  2023-03-31 14:18:16 GMT (Fri) (echo ;cat level3_example.in |./rps3.awk) |./rps2.awk 
+ 2825  2023-03-31 14:18:19 GMT (Fri) fg
+ 2826  2023-03-31 14:18:38 GMT (Fri) (echo ;cat level3_example.in |./rps3.awk) 
+ 2827  2023-03-31 14:18:41 GMT (Fri) fg
+ 2828  2023-03-31 14:19:02 GMT (Fri) (echo ;cat level3_example.in |./rps3.awk) 
+ 2829  2023-03-31 14:19:06 GMT (Fri) (echo ;cat level3_example.in |./rps3.awk) |./rps2.awk 
+ 2830  2023-03-31 14:19:16 GMT (Fri) fg
+ 2831  2023-03-31 14:19:49 GMT (Fri) (echo ;cat level3_example.in |./rps3.awk) |./rps2.awk 
+ 2832  2023-03-31 14:19:56 GMT (Fri) (echo ;cat level3_example.in |./rps3.awk) 
+ 2833  2023-03-31 14:20:03 GMT (Fri) (echo ;cat level3_example.in |./rps3.awk) |diff - level3_example.out 
+ 2834  2023-03-31 14:20:36 GMT (Fri) (echo ;cat level3_example.in |./rps3.awk) |./rps2.awk 
+ 2835  2023-03-31 14:20:40 GMT (Fri) fg
+ 2836  2023-03-31 14:21:25 GMT (Fri) l=3;for a in {1..5};do tr -d \\r < level${l}_$a.in|./rps$l.awk  > level${l}_$a.out;cp level${l}_$a.out /sdcard/;done
+ 2837  2023-03-31 14:21:27 GMT (Fri) v
+ 2838  2023-03-31 14:21:42 GMT (Fri) for a in level3*out;do cat $a|./rps2.awk ;done
+ 2839  2023-03-31 14:21:48 GMT (Fri) for a in level3*out;do cat $a|./rps2.awk |grep -v S;done
+ 2840  2023-03-31 14:21:50 GMT (Fri) for a in level3*out;do cat $a|./rps2.awk |grep R;done
+ 2841  2023-03-31 14:22:03 GMT (Fri) for a in level3*out;do cat $a|./rps2.awk |grep R && echo $a;breka;done
+ 2842  2023-03-31 14:22:05 GMT (Fri) for a in level3*out;do cat $a|./rps2.awk |grep R && echo $a;break;done
+ 2843  2023-03-31 14:22:12 GMT (Fri) grep R -v S
+ 2844  2023-03-31 14:22:13 GMT (Fri) grep R level3_1.out
+ 2845  2023-03-31 14:22:19 GMT (Fri) less level3_1.in 
+ 2846  2023-03-31 14:22:24 GMT (Fri) less level3_1.out
+ 2847  2023-03-31 14:22:31 GMT (Fri) less level3_1.in
+ 2848  2023-03-31 14:22:42 GMT (Fri) ./rps3.awk 
+ 2849  2023-03-31 14:23:01 GMT (Fri) ./rps2.awk 
+ 2850  2023-03-31 14:23:08 GMT (Fri) fg
+ 2851  2023-03-31 14:23:35 GMT (Fri) ./rps2.awk 
+ 2852  2023-03-31 14:24:12 GMT (Fri) fg
+ 2853  2023-03-31 14:25:41 GMT (Fri) ./rps2.awk 
+ 2854  2023-03-31 14:25:57 GMT (Fri) head level3_1.in 
+ 2855  2023-03-31 14:26:02 GMT (Fri) ./rps3.awk 
+ 2856  2023-03-31 14:26:36 GMT (Fri) fg
+ 2857  2023-03-31 14:26:44 GMT (Fri) ./rps3.awk 
+ 2858  2023-03-31 14:26:49 GMT (Fri) head level3_1.in 
+ 2859  2023-03-31 14:26:53 GMT (Fri) head level3_1.in  -n 2
+ 2860  2023-03-31 14:26:56 GMT (Fri) head level3_1.in  -n 2|./rps3.awk 
+ 2861  2023-03-31 14:27:00 GMT (Fri) fg
+ 2862  2023-03-31 14:27:02 GMT (Fri) head level3_1.in  -n 2|./rps3.awk 
+ 2863  2023-03-31 14:27:05 GMT (Fri) fg
+ 2864  2023-03-31 14:28:27 GMT (Fri) head level3_1.in  -n 2|./rps3.awk 
+ 2865  2023-03-31 14:28:37 GMT (Fri) (echo;head level3_1.in  -n 2|./rps3.awk )|./rps2.awk 
+ 2866  2023-03-31 14:29:02 GMT (Fri) fg
+ 2867  2023-03-31 14:29:10 GMT (Fri) (echo;head level3_1.in  -n 2|./rps3.awk )|./rps2.awk 
+ 2868  2023-03-31 14:29:17 GMT (Fri) (echo;head level3_1.in  -n 2|./rps3.awk )
+ 2869  2023-03-31 14:31:18 GMT (Fri) fg
+ 2870  2023-03-31 14:35:08 GMT (Fri) (echo;head level3_1.in  -n 2|./rps3.awk )
+ 2871  2023-03-31 14:35:21 GMT (Fri) fg
+ 2872  2023-03-31 14:36:03 GMT (Fri) l=3;for a in {1..5};do tr -d \\r < level${l}_$a.in|./rps$l.awk  > level${l}_$a.out;cp level${l}_$a.out /sdcard/;done
+ 2873  2023-03-31 14:36:05 GMT (Fri) fg
+ 2874  2023-03-31 14:36:07 GMT (Fri) (echo;head level3_1.in  -n 2|./rps3.awk )
+ 2875  2023-03-31 14:36:12 GMT (Fri) fg
+ 2876  2023-03-31 14:36:16 GMT (Fri) (echo;head level3_1.in  -n 2|./rps3.awk )
+ 2877  2023-03-31 14:36:32 GMT (Fri) fg
+ 2878  2023-03-31 14:38:07 GMT (Fri) (echo;head level3_1.in  -n 2|./rps3.awk )
+ 2879  2023-03-31 14:38:15 GMT (Fri) fg
+ 2880  2023-03-31 14:38:32 GMT (Fri) (echo;head level3_1.in  -n 2|./rps3.awk )
+ 2881  2023-03-31 14:38:36 GMT (Fri) fg
+ 2882  2023-03-31 14:39:17 GMT (Fri) (echo;head level3_1.in  -n 2|./rps3.awk )
+ 2883  2023-03-31 14:39:32 GMT (Fri) fg
+ 2884  2023-03-31 14:39:56 GMT (Fri) (echo;head level3_1.in  -n 2|./rps3.awk )
+ 2885  2023-03-31 14:40:01 GMT (Fri) fg
+ 2886  2023-03-31 14:40:38 GMT (Fri) (echo;head level3_1.in  -n 2|./rps3.awk )
+ 2887  2023-03-31 14:40:39 GMT (Fri) fg
+ 2888  2023-03-31 14:40:43 GMT (Fri) (echo;head level3_1.in  -n 2|./rps3.awk )
+ 2889  2023-03-31 14:40:46 GMT (Fri) fg
+ 2890  2023-03-31 14:41:03 GMT (Fri) (echo;head level3_1.in  -n 2|./rps3.awk )
+ 2891  2023-03-31 14:41:08 GMT (Fri) fg
+ 2892  2023-03-31 14:42:23 GMT (Fri) (echo;head level3_1.in  -n 2|./rps3.awk )
+ 2893  2023-03-31 14:42:42 GMT (Fri) (echo;head level3_1.in  -n 2|./rps3.awk )|./rpc2
+ 2894  2023-03-31 14:42:45 GMT (Fri) (echo;head level3_1.in  -n 2|./rps3.awk )|./rps2.awk 
+ 2895  2023-03-31 14:43:07 GMT (Fri) fg
+ 2896  2023-03-31 14:43:12 GMT (Fri) (echo;head level3_1.in  -n 2|./rps3.awk )|./rps2.awk 
+ 2897  2023-03-31 14:43:17 GMT (Fri) ffg
+ 2898  2023-03-31 14:43:17 GMT (Fri) fg
+ 2899  2023-03-31 14:43:29 GMT (Fri) (echo;head level3_1.in  -n 2|./rps3.awk )|./rps2.awk 
+ 2900  2023-03-31 14:43:34 GMT (Fri) fg
+ 2901  2023-03-31 14:43:41 GMT (Fri) (echo;head level3_1.in  -n 2|./rps3.awk )|./rps2.awk 
+ 2902  2023-03-31 14:43:46 GMT (Fri) (echo;head level3_1.in  -n 2|./rps3.awk )
+ 2903  2023-03-31 14:44:05 GMT (Fri) fg
+ 2904  2023-03-31 14:44:14 GMT (Fri) (echo;head level3_1.in  -n 2|./rps3.awk )
+ 2905  2023-03-31 14:44:22 GMT (Fri) fg
+ 2906  2023-03-31 14:44:28 GMT (Fri) (echo;head level3_1.in  -n 2|./rps3.awk )
+ 2907  2023-03-31 14:44:30 GMT (Fri) fg
+ 2908  2023-03-31 14:45:03 GMT (Fri) (echo;head level3_1.in  -n 2|./rps3.awk )
+ 2909  2023-03-31 14:45:06 GMT (Fri) (echo;head level3_1.in  -n 2|./rps3.awk )|./rps2.awk 
+ 2910  2023-03-31 14:45:09 GMT (Fri) (echo;head level3_1.in  -n 2|./rps3.awk )
+ 2911  2023-03-31 14:45:25 GMT (Fri) fg
+ 2912  2023-03-31 14:45:34 GMT (Fri) (echo;head level3_1.in  -n 2|./rps3.awk )
+ 2913  2023-03-31 14:45:40 GMT (Fri) fg
+ 2914  2023-03-31 14:47:06 GMT (Fri) (echo;head level3_1.in  -n 2|./rps3.awk )
+ 2915  2023-03-31 14:47:08 GMT (Fri) (echo;head level3_1.in  -n 2|./rps3.awk )|./rps2.awk 
+ 2916  2023-03-31 14:47:17 GMT (Fri) fg
+ 2917  2023-03-31 14:47:42 GMT (Fri) (echo;head level3_1.in  -n 2|./rps3.awk )|./rps2.awk 
+ 2918  2023-03-31 14:47:46 GMT (Fri) (echo;head level3_1.in  -n 2|./rps3.awk )
+ 2919  2023-03-31 14:47:50 GMT (Fri) l=3;for a in {1..5};do tr -d \\r < level${l}_$a.in|./rps$l.awk  > level${l}_$a.out;cp level${l}_$a.out /sdcard/;done
+ 2920  2023-03-31 14:48:04 GMT (Fri) for a in level3*out;do cat $a|./rps2.awk |grep -v S;done
+ 2921  2023-03-31 14:48:12 GMT (Fri) for a in level3*out;do cat $a|./rps2.awk |grep R && echo $a;break;done
+ 2922  2023-03-31 14:48:19 GMT (Fri) for a in level3*out;do cat $a|./rps2.awk |grep R -n && echo $a;break;done
+ 2923  2023-03-31 14:48:36 GMT (Fri) sed 17p level2_1.in
+ 2924  2023-03-31 14:48:39 GMT (Fri) sed -d 17p level2_1.in 
+ 2925  2023-03-31 14:48:41 GMT (Fri) sed -n 17p level2_1.in 
+ 2926  2023-03-31 14:48:55 GMT (Fri) (echo;sed -n 17p level2_1.in |./rps3.awk )
+ 2927  2023-03-31 14:49:03 GMT (Fri) (echo;sed -n 17p level3_1.in |./rps3.awk )
+ 2928  2023-03-31 14:49:14 GMT (Fri) (echo;sed -n 17p level3_1.in (
+ 2929  2023-03-31 14:49:17 GMT (Fri) (echo;sed -n 17p level3_1.in 
+ 2930  2023-03-31 14:49:18 GMT (Fri) (echo;sed -n 17p level3_1.in )
+ 2931  2023-03-31 14:49:20 GMT (Fri) (echo;sed -n 17p level3_1.in |./rps3.awk )
+ 2932  2023-03-31 14:49:24 GMT (Fri) fg
+ 2933  2023-03-31 14:49:32 GMT (Fri) (echo;sed -n 17p level3_1.in |./rps3.awk )
+ 2934  2023-03-31 14:49:34 GMT (Fri) fg
+ 2935  2023-03-31 14:49:40 GMT (Fri) (echo;sed -n 17p level3_1.in |./rps3.awk )
+ 2936  2023-03-31 14:49:42 GMT (Fri) fg
+ 2937  2023-03-31 14:49:44 GMT (Fri) (echo;sed -n 17p  )
+ 2938  2023-03-31 14:49:47 GMT (Fri) fg
+ 2939  2023-03-31 14:49:52 GMT (Fri) (echo;sed -n 17p level3_1.in )|./rps3.awk 
+ 2940  2023-03-31 14:49:57 GMT (Fri) (echo;sed -n 17p level3_1.in )|./rps3.awk |./rps2.awk 
+ 2941  2023-03-31 14:50:01 GMT (Fri) (echo;sed -n 17p level3_1.in )|./rps3.awk 
+ 2942  2023-03-31 14:50:05 GMT (Fri) (echo;(echo;sed -n 17p level3_1.in )|./rps3.awk )|./rps2.awk 
+ 2943  2023-03-31 14:50:12 GMT (Fri) (echo;(echo;sed -n 16p level3_1.in )|./rps3.awk )|./rps2.awk 
+ 2944  2023-03-31 14:50:16 GMT (Fri) (echo;(echo;sed -n 18p level3_1.in )|./rps3.awk )|./rps2.awk 
+ 2945  2023-03-31 14:50:21 GMT (Fri) (echo;(echo;sed -n 18p level3_1.in )|./rps3.awk )
+ 2946  2023-03-31 14:51:40 GMT (Fri) (echo;(echo;sed -n 18p level3_1.in ))
+ 2947  2023-03-31 14:55:56 GMT (Fri) (echo;(echo;sed -n 18p level3_1.in )|./rps3.awk )
+ 2948  2023-03-31 14:56:04 GMT (Fri) c rps2.awk 
+ 2949  2023-03-31 14:56:06 GMT (Fri) (echo;(echo;sed -n 18p level3_1.in )|./rps3.awk )
+ 2950  2023-03-31 14:56:11 GMT (Fri) c rps2.awk 
+ 2951  2023-03-31 14:56:20 GMT (Fri) cp -p rps2.awk  rps2_oneround.awk 
+ 2952  2023-03-31 14:56:21 GMT (Fri) im rps2_oneround.awk 
+ 2953  2023-03-31 14:56:23 GMT (Fri) vim rps2_oneround.awk 
+ 2954* 2023-03-31 14:56:35 GMT (Fri) 
+ 2955  2023-03-31 14:56:38 GMT (Fri) vim 
+ 2956  2023-03-31 14:56:42 GMT (Fri) vim rps2_oneround.awk 
+ 2957  2023-03-31 14:56:48 GMT (Fri) (echo;(echo;sed -n 18p level3_1.in )|./rps3.awk )
+ 2958  2023-03-31 14:56:57 GMT (Fri) (echo;(echo;sed -n 18p level3_1.in )|./rps3.awk )|./rps2_oneround.awk 
+ 2959  2023-03-31 14:57:37 GMT (Fri) fg
+ 2960  2023-03-31 14:58:03 GMT (Fri) (echo;(echo;sed -n 18p level3_1.in )|./rps3.awk )|./rps2_oneround.awk 
+ 2961  2023-03-31 14:58:17 GMT (Fri) fg
+ 2962  2023-03-31 14:58:27 GMT (Fri) (echo;(echo;sed -n 18p level3_1.in )|./rps3.awk )|./rps2_oneround.awk 
+ 2963  2023-03-31 14:58:46 GMT (Fri) fgfg
+ 2964  2023-03-31 14:58:56 GMT (Fri) fg
+ 2965  2023-03-31 14:59:04 GMT (Fri) (echo;(echo;sed -n 18p level3_1.in )|./rps3.awk )|./rps2_oneround.awk 
+ 2966  2023-03-31 14:59:08 GMT (Fri) fg
+ 2967  2023-03-31 14:59:49 GMT (Fri) (echo;(echo;sed -n 18p level3_1.in )|./rps3.awk )|./rps2_oneround.awk 
+ 2968  2023-03-31 14:59:52 GMT (Fri) fg
+ 2969  2023-03-31 14:59:58 GMT (Fri) (echo;(echo;sed -n 18p level3_1.in )|./rps3.awk )|./rps2_oneround.awk 
+ 2970  2023-03-31 15:00:00 GMT (Fri) fg
+ 2971  2023-03-31 15:00:12 GMT (Fri) (echo;(echo;sed -n 18p level3_1.in )|./rps3.awk )|./rps2_oneround.awk 
+ 2972  2023-03-31 15:00:27 GMT (Fri) fg
+ 2973  2023-03-31 15:01:29 GMT (Fri) (echo;(echo;sed -n 18p level3_1.in )|./rps3.awk )|./rps2_oneround.awk 
+ 2974  2023-03-31 15:01:58 GMT (Fri) fg
+ 2975  2023-03-31 15:02:06 GMT (Fri) (echo;(echo;sed -n 18p level3_1.in )|./rps3.awk )|./rps2_oneround.awk 
+ 2976  2023-03-31 15:02:11 GMT (Fri) for a in level3*out;do cat $a|./rps2.awk |grep R -n && echo $a;break;done
+ 2977  2023-03-31 15:02:30 GMT (Fri) l=3;for a in {1..5};do tr -d \\r < level${l}_$a.in|./rps$l.awk  > level${l}_$a.out;/bin/cp level${l}_$a.out /sdcard/;done
+ 2978  2023-03-31 15:02:34 GMT (Fri) for a in level3*out;do cat $a|./rps2.awk |grep -v S;done
+ 2979  2023-03-31 15:02:38 GMT (Fri) for a in level3*out;do cat $a|./rps2.awk |grep R -n && echo $a;break;done
+ 2980  2023-03-31 15:02:46 GMT (Fri) (echo;(echo;sed -n 2p level3_1.in )|./rps3.awk )|./rps2_oneround.awk 
+ 2981  2023-03-31 15:03:05 GMT (Fri) vimdiff level3_1.
+ 2982  2023-03-31 15:03:07 GMT (Fri) vimdiff level3_1.*
+ 2983  2023-03-31 15:03:47 GMT (Fri) for a in level3_?.out;do cat $a|./rps2.awk > $a.rps2;done
+ 2984  2023-03-31 15:03:51 GMT (Fri) vimdiff level3_1.*
+ 2985  2023-03-31 15:04:44 GMT (Fri) for a in level3_?.out;do cat $a|./rps2_oneround.awk > $a.rps2;done
+ 2986  2023-03-31 15:04:46 GMT (Fri) vimdiff level3_1.*
+ 2987  2023-03-31 15:05:07 GMT (Fri) fg
+ 2988  2023-03-31 15:05:36 GMT (Fri) dc
+ 2989  2023-03-31 15:06:02 GMT (Fri) for a in R P S;do for b in R P S;do for c in R P S;do for d in R P S;do echo $a$b$c$d;done;done;done;done
+ 2990  2023-03-31 15:06:14 GMT (Fri) for a in R P S;do for b in R P S;do for c in R P S;do for d in R P S;do echo $a$b$c$d;done;done;done;done > best
+ 2991  2023-03-31 15:06:20 GMT (Fri) cat best|./rps2_oneround.awk 
+ 2992  2023-03-31 15:06:23 GMT (Fri) cat best|./rps2.awk
+ 2993  2023-03-31 15:06:36 GMT (Fri) cp -p rps2_oneround.awk findbest.awk
+ 2994  2023-03-31 15:06:37 GMT (Fri) vim findbest.awk
+ 2995  2023-03-31 15:07:13 GMT (Fri) for a in R P S;do for b in R P S;do for c in R P S;do for d in R P S;do echo $a$b$c$d;done;done;done;done |./findbest.awk 
+ 2996  2023-03-31 15:07:14 GMT (Fri) for a in R P S;do for b in R P S;do for c in R P S;do for d in R P S;do echo $a$b$c$d;done;done;done;done |./findbest.awk |wc
+ 2997  2023-03-31 15:07:18 GMT (Fri) for a in R P S;do for b in R P S;do for c in R P S;do for d in R P S;do echo $a$b$c$d;done;done;done;done |./findbest.awk  > ok
+ 2998  2023-03-31 15:07:24 GMT (Fri) fg
+ 2999  2023-03-31 15:08:12 GMT (Fri) vim findbest.awk 
+ 3000  2023-03-31 15:08:27 GMT (Fri) fg
+ 3001  2023-03-31 15:13:42 GMT (Fri) l ok
+ 3002  2023-03-31 15:13:48 GMT (Fri) nl ok
+ 3003  2023-03-31 15:13:50 GMT (Fri) l ok
+ 3004  2023-03-31 15:15:10 GMT (Fri) for a in R P S;do for b in R P S;do for c in R P S;do for d in R P S;do echo $a$b$c$d;done;done;done;done |./findbest.awk  > ok
+ 3005  2023-03-31 15:15:48 GMT (Fri) grep -v ^PR ok|grep -v ^SR|grep -v ^SP|grep -v ^..PR ok|grep -v ^..SR|grep -v ^..SP
+ 3006  2023-03-31 15:15:49 GMT (Fri) grep -v ^PR ok|grep -v ^SR|grep -v ^SP|grep -v ^..PR ok|grep -v ^..SR|grep -v ^..SP|wc
+ 3007  2023-03-31 15:15:51 GMT (Fri) grep -v ^PR ok|grep -v ^SR|grep -v ^SP|grep -v ^..PR ok|grep -v ^..SR|grep -v ^..SP|l
+ 3008  2023-03-31 15:16:05 GMT (Fri) fg
+ 3009  2023-03-31 15:17:27 GMT (Fri) vim rps3.awk 
+ 3010  2023-03-31 15:17:42 GMT (Fri) dc
+ 3011  2023-03-31 15:17:47 GMT (Fri) fg
+ 3012  2023-03-31 15:18:48 GMT (Fri) git init .
+ 3013  2023-03-31 15:18:52 GMT (Fri) git add rps*awk
+ 3014  2023-03-31 15:18:57 GMT (Fri) git commit -am 'level 1 and 2'
+ 3015  2023-03-31 15:18:58 GMT (Fri) fg
+ 3016  2023-03-31 15:21:51 GMT (Fri) (echo;head level3_1.in  -n 2|./rps3.awk )|./rpc2
+ 3017  2023-03-31 15:21:58 GMT (Fri) (echo;head level3_1.in  -n 2|./rps3.awk )|./rps2_oneround.awk 
+ 3018  2023-03-31 15:22:09 GMT (Fri) l=3;for a in {1..5};do tr -d \\r < level${l}_$a.in|./rps$l.awk  > level${l}_$a.out;/bin/cp level${l}_$a.out /sdcard/;done
+ 3019  2023-03-31 15:22:12 GMT (Fri) grep -v ^PR ok|grep -v ^SR|grep -v ^SP|grep -v ^..PR ok|grep -v ^..SR|grep -v ^..SP|l
+ 3020  2023-03-31 15:22:15 GMT (Fri) for a in level3*out;do cat $a|./rps2.awk |grep -v S;done
+ 3021  2023-03-31 15:22:18 GMT (Fri) for a in level3*out;do cat $a|./rps2.awk |grep R -n && echo $a;break;done
+ 3022  2023-03-31 15:22:28 GMT (Fri) for a in level3*out;do cat $a|./rps3.awk |grep R -n && echo $a;break;done
+ 3023  2023-03-31 15:22:34 GMT (Fri) v -tr
+ 3024  2023-03-31 15:22:35 GMT (Fri) fg
+ 3025  2023-03-31 15:22:48 GMT (Fri) l=3;for a in {1..5};do tr -d \\r < level${l}_$a.in|./rps$l.awk  > level${l}_$a.out;/bin/cp level${l}_$a.out /sdcard/;done
+ 3026  2023-03-31 15:22:54 GMT (Fri) (echo ;cat level3_example.in |./rps3.awk) |./rps2.awk 
+ 3027* 2023-03-31 15:22:58 GMT (Fri) cat level3_example.o
+ 3028  2023-03-31 15:23:04 GMT (Fri) (echo ;cat level3_example.in |./rps3.awk)
+ 3029  2023-03-31 15:23:12 GMT (Fri) l=3;for a in {1..5};do tr -d \\r < level${l}_$a.in|./rps$l.awk  > level${l}_$a.out;/bin/cp level${l}_$a.out /sdcard/;done
+ 3030  2023-03-31 15:23:20 GMT (Fri) for a in level3*out;do cat $a|./rps3.awk |grep R -n && echo $a;break;done
+ 3031  2023-03-31 15:23:23 GMT (Fri) grep R *out
+ 3032  2023-03-31 15:23:46 GMT (Fri) for a in level3*out;do cat $a|./rps2.awk|grep R -n && echo $a;break;done
+ 3033  2023-03-31 15:23:52 GMT (Fri) (echo;(echo;sed -n 2p level3_1.in )|./rps3.awk )|./rps2_oneround.awk 
+ 3034  2023-03-31 15:24:10 GMT (Fri) less level3_1.out
+ 3035  2023-03-31 15:24:14 GMT (Fri) v *rps
+ 3036  2023-03-31 15:24:20 GMT (Fri) v *rps2
+ 3037  2023-03-31 15:24:27 GMT (Fri) rm *rps2
+ 3038  2023-03-31 15:24:31 GMT (Fri) for a in level3*out;do cat $a|./rps2.awk|grep R -n && echo $a;break;done
+ 3039  2023-03-31 15:24:36 GMT (Fri) v *out
+ 3040  2023-03-31 15:24:44 GMT (Fri) for a in level3*out;do cat $a|./rps2.awk|grep R -n && echo $a;break;done
+ 3041  2023-03-31 15:24:54 GMT (Fri) cat level3_1.in |./rps3.awk 
+ 3042  2023-03-31 15:24:57 GMT (Fri) cat level3_1.in |./rps3.awk |./rps2.awk 
+ 3043  2023-03-31 15:24:58 GMT (Fri) cat level3_1.in |./rps3.awk |./rps2.awk |less
+ 3044  2023-03-31 15:25:06 GMT (Fri) (echo;(echo;sed -n 2p level3_1.in )|./rps3.awk )|./rps2_oneround.awk 
+ 3045  2023-03-31 15:25:10 GMT (Fri) (echo;(echo;sed -n 2p level3_1.in )|./rps3.awk )|./rps2.awi
+ 3046  2023-03-31 15:25:10 GMT (Fri) (echo;(echo;sed -n 2p level3_1.in )|./rps3.awk )|./rps2.awk
+ 3047  2023-03-31 15:25:22 GMT (Fri) (echo;(echo;sed -n 2p level3_1.in )|./rps3.awk )
+ 3048  2023-03-31 15:25:25 GMT (Fri) ./rps2.awk
+ 3049  2023-03-31 15:25:33 GMT (Fri) less level3_out.out
+ 3050  2023-03-31 15:25:38 GMT (Fri) less level3_1.out
+ 3051  2023-03-31 15:25:42 GMT (Fri) haed level3_1.out
+ 3052  2023-03-31 15:25:43 GMT (Fri) head -n 1 level3_1.out
+ 3053  2023-03-31 15:25:49 GMT (Fri) head -n 1 level3_1.out;echo SSSSSSSSSSSSSSSSSSPRRRPRRRPRPRSP
+ 3054  2023-03-31 15:25:59 GMT (Fri) (head -n 1 level3_1.out;echo SSSSSSSSSSSSSSSSSSPRRRPRRRPRPRSP)|./rps2_oneround.awk 
+ 3055  2023-03-31 15:26:02 GMT (Fri) (head -n 1 level3_1.out;echo SSSSSSSSSSSSSSSSSSPRRRPRRRPRPRSP)|./rps2.awk
+ 3056  2023-03-31 15:26:14 GMT (Fri) l=3;for a in {1..5};do tr -d \\r < level${l}_$a.in|./rps$l.awk  > level${l}_$a.out;/bin/cp level${l}_$a.out /sdcard/;done
+ 3057  2023-03-31 15:26:15 GMT (Fri) for a in level3*out;do cat $a|./rps2.awk|grep R -n && echo $a;break;done
+ 3058  2023-03-31 15:26:41 GMT (Fri) head level3_1.out|./rps3.awk |./rps2.awk 
+ 3059  2023-03-31 15:26:44 GMT (Fri) head level3_1.out|./rps3.awk 
+ 3060  2023-03-31 15:26:49 GMT (Fri) head level3_1.in|./rps3.awk |./rps2.awk 
+ 3061  2023-03-31 15:26:52 GMT (Fri) head level3_1.in|./rps3.awk 
+ 3062  2023-03-31 15:27:04 GMT (Fri) (head -n 1 level3_1.out;echo SSSSSSSSSSSSSSSSSSPRRRPRRRPRPRSP)|./rps2.awk
+ 3063  2023-03-31 15:27:10 GMT (Fri) ./rps2.awk 
+ 3064  2023-03-31 15:27:21 GMT (Fri) head level3_1.in|./rps3.awk |./rps2.awk 
+ 3065  2023-03-31 15:27:38 GMT (Fri) (echo;head level3_1.in|./rps3.awk )|./rps2.awk 
+ 3066  2023-03-31 15:27:45 GMT (Fri) (echo;(echo;sed -n 3p level3_1.in )|./rps3.awk )
+ 3067  2023-03-31 15:27:48 GMT (Fri) (echo;(echo;sed -n 3p level3_1.in )|./rps3.awk )|./rps2.awk 
+ 3068  2023-03-31 15:28:11 GMT (Fri) (echo;(echo;sed -n 18p level3_1.in )|./rps3.awk )|./rps2_oneround.awk 
+ 3069  2023-03-31 15:28:19 GMT (Fri) (echo;(echo;sed -n 3p level3_1.in )|./rps3.awk )|./rps2_oneround.awk 
+ 3070  2023-03-31 15:28:33 GMT (Fri) sead -n 3p level3_1.in
+ 3071  2023-03-31 15:28:37 GMT (Fri) sed -n 3p level3_1.in
+ 3072  2023-03-31 15:29:54 GMT (Fri) fg
+ 3073  2023-03-31 15:30:05 GMT (Fri) sed -n 3p level3_1.in
+ 3074  2023-03-31 15:31:22 GMT (Fri) (echo;(echo;sed -n 3p level3_1.in )|./rps3.awk )|./rps2_oneround.awk 
+ 3075  2023-03-31 15:31:35 GMT (Fri) vim expand.awk
+ 3076  2023-03-31 15:32:12 GMT (Fri) chmod +x expand.awk 
+ 3077  2023-03-31 15:32:15 GMT (Fri) (echo;(echo;sed -n 3p level3_1.in )|./rps3.awk )|./rps2_oneround.awk |./expand.awk 
+ 3078  2023-03-31 15:32:17 GMT (Fri) fg
+ 3079  2023-03-31 15:32:19 GMT (Fri) vim expand.awk
+ 3080  2023-03-31 15:32:36 GMT (Fri) (echo;(echo;sed -n 3p level3_1.in )|./rps3.awk )|./rps2_oneround.awk 
+ 3081  2023-03-31 15:32:38 GMT (Fri) (echo;(echo;sed -n 3p level3_1.in )|./rps3.awk )|./rps2_oneround.awk |./expand.awk 
+ 3082  2023-03-31 15:32:39 GMT (Fri) fg
+ 3083  2023-03-31 15:32:47 GMT (Fri) (echo;(echo;sed -n 3p level3_1.in )|./rps3.awk )|./rps2_oneround.awk |./expand.awk 
+ 3084  2023-03-31 15:32:49 GMT (Fri) fg
+ 3085  2023-03-31 15:32:51 GMT (Fri) (echo;(echo;sed -n 3p level3_1.in )|./rps3.awk )|./rps2_oneround.awk |./expand.awk 
+ 3086  2023-03-31 15:32:52 GMT (Fri) fg
+ 3087  2023-03-31 15:33:05 GMT (Fri) (echo;(echo;sed -n 3p level3_1.in )|./rps3.awk )|./rps2_oneround.awk |./expand.awk -v FIELDWIDTHS=2
+ 3088  2023-03-31 15:33:07 GMT (Fri) fg
+ 3089  2023-03-31 15:33:12 GMT (Fri) man gawk
+ 3090  2023-03-31 15:33:25 GMT (Fri) f
+ 3091  2023-03-31 15:33:26 GMT (Fri) fg
+ 3092  2023-03-31 15:33:42 GMT (Fri) awk -v FIELDWIDTHS=2 '{print $NF}'
+ 3093  2023-03-31 15:33:46 GMT (Fri) awk -v FIELDWIDTHS=2 '{print NF}'
+ 3094* 2023-03-31 15:34:08 GMT (Fri) awk -v FIELDWIDTHS=2 '{print $A3}'
+ 3095  2023-03-31 15:34:16 GMT (Fri) awk -v FIELDWIDTHS=2 '{print $NF}'
+ 3096  2023-03-31 15:34:26 GMT (Fri) awk -v FIELDWIDTHS=2 '{print $2}'
+ 3097  2023-03-31 15:34:29 GMT (Fri) awk -v FIELDWIDTHS=2 '{print $1}'
+ 3098  2023-03-31 15:34:32 GMT (Fri) awk -v FIELDWIDTHS=2 '{print $2}'
+ 3099  2023-03-31 15:35:24 GMT (Fri) awk -v FPAT=.. '{print $2}'
+ 3100  2023-03-31 15:35:27 GMT (Fri) fg
+ 3101  2023-03-31 15:35:36 GMT (Fri) (echo;(echo;sed -n 3p level3_1.in )|./rps3.awk )|./rps2_oneround.awk |./expand.awk 
+ 3102  2023-03-31 15:35:37 GMT (Fri) fg
+ 3103  2023-03-31 15:35:40 GMT (Fri) (echo;(echo;sed -n 3p level3_1.in )|./rps3.awk )|./rps2_oneround.awk |./expand.awk 
+ 3104  2023-03-31 15:35:41 GMT (Fri) fg
+ 3105  2023-03-31 15:35:44 GMT (Fri) (echo;(echo;sed -n 3p level3_1.in )|./rps3.awk )|./rps2_oneround.awk |./expand.awk 
+ 3106  2023-03-31 15:35:45 GMT (Fri) fg
+ 3107  2023-03-31 15:35:46 GMT (Fri) (echo;(echo;sed -n 3p level3_1.in )|./rps3.awk )|./rps2_oneround.awk |./expand.awk 
+ 3108  2023-03-31 15:35:51 GMT (Fri) (echo;(echo;sed -n 3p level3_1.in )|./rps3.awk )|./rps2_oneround.awk 
+ 3109  2023-03-31 15:35:54 GMT (Fri) vim expand.awk
+ 3110  2023-03-31 15:36:01 GMT (Fri) (echo;(echo;sed -n 3p level3_1.in )|./rps3.awk )|./rps2_oneround.awk 
+ 3111  2023-03-31 15:36:04 GMT (Fri) (echo;(echo;sed -n 3p level3_1.in )|./rps3.awk )|./rps2_oneround.awk |./expand.awk 
+ 3112  2023-03-31 15:36:32 GMT (Fri) for a in level3*out;do cat $a|./rps2.awk|grep R -n && echo $a;break;done
+ 3113  2023-03-31 15:36:36 GMT (Fri) (echo;(echo;sed -n 2p level3_1.in )|./rps3.awk )|./rps2_oneround.awk |./expand.awk 
+ 3114  2023-03-31 15:37:02 GMT (Fri) l=3;for a in {1..5};do tr -d \\r < level${l}_$a.in|./rps$l.awk  > level${l}_$a.out;/bin/cp level${l}_$a.out /sdcard/;done
+ 3115  2023-03-31 15:37:04 GMT (Fri) for a in level3*out;do cat $a|./rps2.awk|grep R -n && echo $a;break;done
+ 3116  2023-03-31 15:37:24 GMT (Fri) (echo;(echo;sed -n 3p level3_1.in )|./rps3.awk )|./rps2_oneround.awk |./expand.awk 
+ 3117  2023-03-31 15:37:42 GMT (Fri) head level3_1.out
+ 3118  2023-03-31 15:37:52 GMT (Fri) ./rps2.awk 
+ 3119  2023-03-31 15:38:20 GMT (Fri) (echo;(echo;sed -n 3p level3_1.in )|./rps3.awk )|./rps2_oneround.awk |./expand.awk 
+ 3120  2023-03-31 15:38:30 GMT (Fri) ./rps2.awk 
+ 3121  2023-03-31 15:38:42 GMT (Fri) (echo;(echo;sed -n 3p level3_1.in )|./rps3.awk )|./rps2_oneround.awk |./expand.awk 
+ 3122  2023-03-31 15:38:50 GMT (Fri) (echo;(echo;sed -n 3p level3_1.in )))
+ 3123  2023-03-31 15:38:51 GMT (Fri) (echo;(echo;sed -n 3p level3_1.in ))
+ 3124  2023-03-31 15:39:04 GMT (Fri) (echo;(echo;sed -n 3p level3_1.in )|./rps3.awk )
+ 3125  2023-03-31 15:39:11 GMT (Fri) (echo;(echo;sed -n 3p level3_1.in )|./rps3.awk )|./rps2_oneround.awk |./expand.awk 
+ 3126  2023-03-31 15:39:18 GMT (Fri) for a in level3*out;do cat $a|./rps2.awk|grep R -n && echo $a;break;done
+ 3127  2023-03-31 15:39:58 GMT (Fri) (echo;(echo;sed -n 3p level3_1.in )|./rps3.awk )|./rps2_oneround.awk |./expand.awk 
+ 3128  2023-03-31 15:40:09 GMT (Fri) (echo;(echo;sed -n 3p level3_1.in )|./rps3.awk )|./rps2_oneround.awk 
+ 3129  2023-03-31 15:40:15 GMT (Fri) (echo;(echo;sed -n 3p level3_1.in )|./rps3.awk )|./rps2_oneround.awk |./expand.awk 
+ 3130  2023-03-31 15:40:18 GMT (Fri) vim expand.awk
+ 3131  2023-03-31 15:40:27 GMT (Fri) (echo;(echo;sed -n 3p level3_1.in )|./rps3.awk )|./rps2_oneround.awk |./expand.awk 
+ 3132  2023-03-31 15:40:44 GMT (Fri) fg
+ 3133  2023-03-31 15:40:48 GMT (Fri) (echo;(echo;sed -n 3p level3_1.in )|./rps3.awk )|./rps2_oneround.awk |./expand.awk 
+ 3134  2023-03-31 15:40:54 GMT (Fri) (echo;(echo;sed -n 3p level3_1.in )|./rps3.awk )
+ 3135  2023-03-31 15:40:55 GMT (Fri) (echo;(echo;sed -n 3p level3_1.in )|./rps3.awk )|./rps2_oneround.awk |./expand.awk 
+ 3136  2023-03-31 15:40:57 GMT (Fri) fg
+ 3137  2023-03-31 15:40:58 GMT (Fri) (echo;(echo;sed -n 3p level3_1.in )|./rps3.awk )|./rps2_oneround.awk |./expand.awk 
+ 3138  2023-03-31 15:41:00 GMT (Fri) fg
+ 3139  2023-03-31 15:41:02 GMT (Fri) (echo;(echo;sed -n 3p level3_1.in )|./rps3.awk )|./rps2_oneround.awk |./expand.awk 
+ 3140  2023-03-31 15:41:07 GMT (Fri) for a in level3*out;do cat $a|./rps2.awk|grep R -n && echo $a;break;done
+ 3141  2023-03-31 15:41:12 GMT (Fri) l=3;for a in {1..5};do tr -d \\r < level${l}_$a.in|./rps$l.awk  > level${l}_$a.out;/bin/cp level${l}_$a.out /sdcard/;done
+ 3142  2023-03-31 15:41:16 GMT (Fri) for a in level3*out;do cat $a|./rps2.awk |grep -v S;done
+ 3143  2023-03-31 15:41:18 GMT (Fri) for a in level3*out;do cat $a|./rps2.awk|grep R -n && echo $a;break;done
+ 3144  2023-03-31 15:41:41 GMT (Fri) (echo;(echo;sed -n 17p level3_1.in )|./rps3.awk )|./rps2_oneround.awk |./expand.awk 
+ 3145  2023-03-31 15:41:58 GMT (Fri) for a in level3*out;do cat $a|./rps2.awk|grep R -n && echo $a;break;done
+ 3146  2023-03-31 15:42:12 GMT (Fri) (echo;(echo;sed -n 17p level3_1.in )|./rps3.awk )|./rps2_oneround.awk |./expand.awk 
+ 3147  2023-03-31 15:42:16 GMT (Fri) (echo;(echo;sed -n 17p level3_1.in )|./rps3.awk )|./rps2_oneround.awk 
+ 3148  2023-03-31 15:42:30 GMT (Fri) l level3_1.out
+ 3149  2023-03-31 15:42:33 GMT (Fri) (echo;(echo;sed -n 17p level3_1.in )|./rps3.awk )|./rps2_oneround.awk 
+ 3150  2023-03-31 15:42:36 GMT (Fri) l level3_1.out
+ 3151  2023-03-31 15:42:51 GMT (Fri) for a in level3*out;do (echo ;cat $a)|./rps2.awk|grep R -n && echo $a;break;done
+ 3152  2023-03-31 15:43:17 GMT (Fri) (echo;(echo;sed -n 17p level3_1.in )|./rps3.awk )|./rps2_oneround.awk 
+ 3153  2023-03-31 15:43:48 GMT (Fri) for a in level3*out;do (echo ;cat $a)|./rps2.awk|grep R -n && echo $a;break;done
+ 3154  2023-03-31 15:44:42 GMT (Fri) (echo;(echo;sed -n 18p level3_1.in )|./rps3.awk )|./rps2_oneround.awk 
+ 3155  2023-03-31 15:44:44 GMT (Fri) for a in level3*out;do (echo ;cat $a)|./rps2.awk|grep R -n && echo $a;break;done
+ 3156  2023-03-31 15:44:46 GMT (Fri) (echo;(echo;sed -n 18p level3_1.in )|./rps3.awk )|./rps2_oneround.awk 
+ 3157  2023-03-31 15:44:55 GMT (Fri) (echo;(echo;sed -n 18p level3_1.in )|./rps3.awk )|./rps2_oneround.awk |./exp
+ 3158  2023-03-31 15:44:55 GMT (Fri) (echo;(echo;sed -n 18p level3_1.in )|./rps3.awk )|./rps2_oneround.awk |./expand.awk 
+ 3159  2023-03-31 15:44:59 GMT (Fri) fg
+ 3160  2023-03-31 15:45:00 GMT (Fri) vim expand.awk
+ 3161  2023-03-31 15:45:25 GMT (Fri) fg
+ 3162  2023-03-31 15:45:26 GMT (Fri) (echo;(echo;sed -n 18p level3_1.in )|./rps3.awk )|./rps2_oneround.awk |./expand.awk 
+ 3163  2023-03-31 15:45:28 GMT (Fri) vim expand.awk
+ 3164  2023-03-31 15:45:31 GMT (Fri) (echo;(echo;sed -n 18p level3_1.in )|./rps3.awk )|./rps2_oneround.awk |./expand.awk 
+ 3165  2023-03-31 15:45:33 GMT (Fri) vim expand.awk
+ 3166  2023-03-31 15:45:43 GMT (Fri) (echo;(echo;sed -n 18p level3_1.in )|./rps3.awk )|./rps2_oneround.awk |./expand.awk 
+ 3167  2023-03-31 15:45:45 GMT (Fri) vim expand.awk
+ 3168  2023-03-31 15:45:53 GMT (Fri) (echo;(echo;sed -n 18p level3_1.in )|./rps3.awk )|./rps2_oneround.awk |./expand.awk 
+ 3169  2023-03-31 15:45:54 GMT (Fri) vim expand.awk
+ 3170  2023-03-31 15:46:03 GMT (Fri) (echo;(echo;sed -n 18p level3_1.in )|./rps3.awk )|./rps2_oneround.awk |./expand.awk 
+ 3171  2023-03-31 15:46:11 GMT (Fri) fg
+ 3172  2023-03-31 15:46:41 GMT (Fri) (echo;(echo;sed -n 18p level3_1.in )|./rps3.awk )|./rps2_oneround.awk |./expand.awk 
+ 3173  2023-03-31 15:46:45 GMT (Fri) l=3;for a in {1..5};do tr -d \\r < level${l}_$a.in|./rps$l.awk  > level${l}_$a.out;/bin/cp level${l}_$a.out /sdcard/;done
+ 3174  2023-03-31 15:46:47 GMT (Fri) for a in level3*out;do cat $a|./rps2.awk |grep -v S;done
+ 3175  2023-03-31 15:46:50 GMT (Fri) for a in level3*out;do (echo ;cat $a)|./rps2.awk|grep R -n && echo $a;break;done
+ 3176  2023-03-31 15:47:06 GMT (Fri) grep R level3*out
+ 3177  2023-03-31 15:47:15 GMT (Fri) for a in level3*out;do (echo ;cat $a)|./rps2.awk|grep R -n && echo $a;break;done
+ 3178  2023-03-31 15:47:16 GMT (Fri) fg
+ 3179  2023-03-31 15:47:23 GMT (Fri) git commit -am 'level 3 working'
+ 3180  2023-03-31 15:47:24 GMT (Fri) fg
+ 3181  2023-03-31 15:47:45 GMT (Fri) for a in level3*out;do (echo ;cat $a)|./rps2.awk|grep R -n && echo $a;break;done
+ 3182  2023-03-31 15:47:47 GMT (Fri) l=3;for a in {1..5};do tr -d \\r < level${l}_$a.in|./rps$l.awk  > level${l}_$a.out;/bin/cp level${l}_$a.out /sdcard/;done
+ 3183  2023-03-31 15:47:48 GMT (Fri) for a in level3*out;do (echo ;cat $a)|./rps2.awk|grep R -n && echo $a;break;done
+ 3184  2023-03-31 15:47:50 GMT (Fri) fg
+ 3185  2023-03-31 15:48:20 GMT (Fri) l=3;for a in {1..5};do tr -d \\r < level${l}_$a.in|./rps$l.awk  > level${l}_$a.out;/bin/cp level${l}_$a.out /sdcard/;done
+ 3186  2023-03-31 15:48:22 GMT (Fri) for a in level3*out;do cat $a|./rps2.awk |grep -v S;done
+ 3187  2023-03-31 15:48:24 GMT (Fri) for a in level3*out;do (echo ;cat $a)|./rps2.awk|grep R -n && echo $a;break;done
+ 3188  2023-03-31 15:48:26 GMT (Fri) v -tr
+ 3189  2023-03-31 15:48:28 GMT (Fri) for a in level3*out;do (echo ;cat $a)|./rps2.awk|grep R -n && echo $a;break;done
+ 3190  2023-03-31 15:52:13 GMT (Fri) jobs
+ 3191  2023-03-31 15:52:16 GMT (Fri) fg
+ 3192  2023-03-31 15:52:42 GMT (Fri) l=3;for a in {1..5};do tr -d \\r < level${l}_$a.in|./rps$l.awk  > level${l}_$a.out;/bin/cp level${l}_$a.out /sdcard/;done
+ 3193  2023-03-31 15:52:51 GMT (Fri) fg
+ 3194  2023-03-31 15:52:56 GMT (Fri) l=3;for a in {1..5};do tr -d \\r < level${l}_$a.in|./rps$l.awk  > level${l}_$a.out;/bin/cp level${l}_$a.out /sdcard/;done
+ 3195  2023-03-31 15:53:33 GMT (Fri) fg
+ 3196  2023-03-31 15:53:52 GMT (Fri) l=3;for a in {1..5};do tr -d \\r < level${l}_$a.in|./rps$l.awk  > level${l}_$a.out;/bin/cp level${l}_$a.out /sdcard/;done
+ 3197  2023-03-31 15:54:18 GMT (Fri) fg
+ 3198  2023-03-31 15:54:35 GMT (Fri) l=3;for a in {1..5};do tr -d \\r < level${l}_$a.in|./rps$l.awk  > level${l}_$a.out;/bin/cp level${l}_$a.out /sdcard/;done
+ 3199  2023-03-31 15:54:37 GMT (Fri) fg
+ 3200  2023-03-31 15:54:56 GMT (Fri) l=3;for a in {1..5};do tr -d \\r < level${l}_$a.in|./rps$l.awk  > level${l}_$a.out;/bin/cp level${l}_$a.out /sdcard/;done
+ 3201  2023-03-31 15:54:59 GMT (Fri) fg
+ 3202  2023-03-31 15:59:19 GMT (Fri) l=3;for a in {1..5};do tr -d \\r < level${l}_$a.in|./rps$l.awk  > level${l}_$a.out;/bin/cp level${l}_$a.out /sdcard/;done
+ 3203  2023-03-31 15:59:21 GMT (Fri) for a in level3*out;do (echo ;cat $a)|./rps2.awk|grep R -n && echo $a;break;done
+ 3204  2023-03-31 15:59:22 GMT (Fri) fg
+ 3205  2023-03-31 15:59:36 GMT (Fri) l=3;for a in {1..5};do tr -d \\r < level${l}_$a.in|./rps$l.awk  > level${l}_$a.out;/bin/cp level${l}_$a.out /sdcard/;done
+ 3206  2023-03-31 15:59:38 GMT (Fri) for a in level3*out;do (echo ;cat $a)|./rps2.awk|grep R -n && echo $a;break;done
+ 3207  2023-03-31 15:59:39 GMT (Fri) for a in level3*out;do cat $a|./rps2.awk |grep -v S;done
+ 3208  2023-03-31 15:59:40 GMT (Fri) fg
+ 3209  2023-03-31 16:00:02 GMT (Fri) l=3;for a in {1..5};do tr -d \\r < level${l}_$a.in|./rps$l.awk  > level${l}_$a.out;/bin/cp level${l}_$a.out /sdcard/;done
+ 3210  2023-03-31 16:00:04 GMT (Fri) fg
+ 3211  2023-03-31 16:00:20 GMT (Fri) l=3;for a in {1..5};do tr -d \\r < level${l}_$a.in|./rps$l.awk  > level${l}_$a.out;/bin/cp level${l}_$a.out /sdcard/;done
+ 3212  2023-03-31 16:00:21 GMT (Fri) fg
+ 3213  2023-03-31 16:00:22 GMT (Fri) l=3;for a in {1..5};do tr -d \\r < level${l}_$a.in|./rps$l.awk  > level${l}_$a.out;/bin/cp level${l}_$a.out /sdcard/;done
+ 3214  2023-03-31 16:00:23 GMT (Fri) f
+ 3215  2023-03-31 16:00:24 GMT (Fri) fg
+ 3216  2023-03-31 16:00:25 GMT (Fri) f
+ 3217  2023-03-31 16:00:27 GMT (Fri) l=3;for a in {1..5};do tr -d \\r < level${l}_$a.in|./rps$l.awk  > level${l}_$a.out;/bin/cp level${l}_$a.out /sdcard/;done
+ 3218  2023-03-31 16:00:28 GMT (Fri) fg
+ 3219  2023-03-31 16:00:29 GMT (Fri) l=3;for a in {1..5};do tr -d \\r < level${l}_$a.in|./rps$l.awk  > level${l}_$a.out;/bin/cp level${l}_$a.out /sdcard/;done
+ 3220  2023-03-31 16:00:31 GMT (Fri) fg
+ 3221  2023-03-31 16:00:32 GMT (Fri) l=3;for a in {1..5};do tr -d \\r < level${l}_$a.in|./rps$l.awk  > level${l}_$a.out;/bin/cp level${l}_$a.out /sdcard/;done
+ 3222  2023-03-31 16:00:33 GMT (Fri) fg
+ 3223  2023-03-31 16:00:53 GMT (Fri) l=3;for a in {1..5};do tr -d \\r < level${l}_$a.in|./rps$l.awk  > level${l}_$a.out;/bin/cp level${l}_$a.out /sdcard/;done
+ 3224  2023-03-31 16:00:55 GMT (Fri) for a in level3*out;do (echo ;cat $a)|./rps2.awk|grep R -n && echo $a;break;done
+ 3225  2023-03-31 16:00:56 GMT (Fri) for a in level3*out;do cat $a|./rps2.awk |grep -v S;done
+ 3226  2023-03-31 16:00:57 GMT (Fri) fg
+ 3227  2023-03-31 16:01:05 GMT (Fri) for a in level3*out;do cat $a|./rps2.awk |grep -v S;done
+ 3228  2023-03-31 16:01:07 GMT (Fri) l=3;for a in {1..5};do tr -d \\r < level${l}_$a.in|./rps$l.awk  > level${l}_$a.out;/bin/cp level${l}_$a.out /sdcard/;done
+ 3229  2023-03-31 16:01:08 GMT (Fri) fg
+ 3230  2023-03-31 16:01:09 GMT (Fri) l=3;for a in {1..5};do tr -d \\r < level${l}_$a.in|./rps$l.awk  > level${l}_$a.out;/bin/cp level${l}_$a.out /sdcard/;done
+ 3231  2023-03-31 16:01:10 GMT (Fri) fg
+ 3232  2023-03-31 16:01:23 GMT (Fri) l=3;for a in {1..5};do tr -d \\r < level${l}_$a.in|./rps$l.awk  > level${l}_$a.out;/bin/cp level${l}_$a.out /sdcard/;done
+ 3233  2023-03-31 16:01:25 GMT (Fri) for a in level3*out;do cat $a|./rps2.awk |grep -v S;done
+ 3234  2023-03-31 16:01:26 GMT (Fri) for a in level3*out;do (echo ;cat $a)|./rps2.awk|grep R -n && echo $a;break;done
+ 3235  2023-03-31 16:01:27 GMT (Fri) fg
+ 3236  2023-03-31 16:01:46 GMT (Fri) l=3;for a in {1..5};do tr -d \\r < level${l}_$a.in|./rps$l.awk  > level${l}_$a.out;/bin/cp level${l}_$a.out /sdcard/;done
+ 3237  2023-03-31 16:01:49 GMT (Fri) for a in level3*out;do cat $a|./rps2.awk |grep -v S;done
+ 3238  2023-03-31 16:01:50 GMT (Fri) for a in level3*out;do (echo ;cat $a)|./rps2.awk|grep R -n && echo $a;break;done
+ 3239  2023-03-31 16:01:51 GMT (Fri) fg
+ 3240  2023-03-31 16:02:00 GMT (Fri) l=3;for a in {1..5};do tr -d \\r < level${l}_$a.in|./rps$l.awk  > level${l}_$a.out;/bin/cp level${l}_$a.out /sdcard/;done
+ 3241  2023-03-31 16:02:02 GMT (Fri) for a in level3*out;do cat $a|./rps2.awk |grep -v S;done
+ 3242  2023-03-31 16:02:03 GMT (Fri) for a in level3*out;do (echo ;cat $a)|./rps2.awk|grep R -n && echo $a;break;done
+ 3243  2023-03-31 16:02:50 GMT (Fri) fg
+ 3244  2023-03-31 16:03:02 GMT (Fri) (echo ;cat level3_example.in |./rps3.awk)
+ 3245  2023-03-31 16:03:06 GMT (Fri) fg
+ 3246  2023-03-31 16:03:08 GMT (Fri) wc *out
+ 3247  2023-03-31 16:03:15 GMT (Fri) wc level*|sort -nk 3
+ 3248  2023-03-31 16:03:17 GMT (Fri) wc level*|sort -nk 3|les
+ 3249  2023-03-31 16:03:18 GMT (Fri) wc level*|sort -nk 3|less
+ 3250  2023-03-31 16:03:24 GMT (Fri) wc level3*out
+ 3251  2023-03-31 16:03:34 GMT (Fri) head -1 leve3_?.in
+ 3252  2023-03-31 16:03:36 GMT (Fri) head -1 level3_?.in
+ 3253  2023-03-31 16:03:40 GMT (Fri) wc level3*out
+ 3254  2023-03-31 16:03:42 GMT (Fri) dc
+ 3255  2023-03-31 16:04:25 GMT (Fri) fg
+ 3256  2023-03-31 16:04:28 GMT (Fri) git diff
+ 3257  2023-03-31 16:04:31 GMT (Fri) for a in level3*out;do cat $a|./rps2.awk |grep -v S;done
+ 3258  2023-03-31 16:04:32 GMT (Fri) for a in level3*out;do (echo ;cat $a)|./rps2.awk|grep R -n && echo $a;break;done
+ 3259  2023-03-31 16:04:36 GMT (Fri) fg
+ 3260  2023-03-31 16:04:39 GMT (Fri) vim rps3.awk 
+ 3261  2023-03-31 16:04:47 GMT (Fri) l=3;for a in {1..5};do tr -d \\r < level${l}_$a.in|./rps$l.awk  > level${l}_$a.out;/bin/cp level${l}_$a.out /sdcard/;done
+ 3262  2023-03-31 16:04:48 GMT (Fri) for a in level3*out;do cat $a|./rps2.awk |grep -v S;done
+ 3263  2023-03-31 16:04:49 GMT (Fri) fg
+ 3264  2023-03-31 16:04:51 GMT (Fri) for a in level3*out;do (echo ;cat $a)|./rps2.awk|grep R -n && echo $a;break;done
+ 3265  2023-03-31 16:04:52 GMT (Fri) fg
+ 3266  2023-03-31 16:04:55 GMT (Fri) git commit -am 'level 3 working'
+ 3267  2023-03-31 16:04:56 GMT (Fri) l=3;for a in {1..5};do tr -d \\r < level${l}_$a.in|./rps$l.awk  > level${l}_$a.out;/bin/cp level${l}_$a.out /sdcard/;done
+ 3268  2023-03-31 16:04:57 GMT (Fri) for a in level3*out;do cat $a|./rps2.awk |grep -v S;done
+ 3269  2023-03-31 16:04:59 GMT (Fri) vim rps3.awk 
+ 3270  2023-03-31 16:05:01 GMT (Fri) for a in level3*out;do (echo ;cat $a)|./rps2.awk|grep R -n && echo $a;break;done
+ 3271  2023-03-31 16:05:17 GMT (Fri) l=3;for a in {1..5};do tr -d \\r < level${l}_$a.in|./rps$l.awk  > level${l}_$a.out;/bin/cp level${l}_$a.out /sdcard/;done;/bin/cp -p rps$l.awk /sdcard/
+ 3272  2023-03-31 16:10:32 GMT (Fri) unzip downloads/level4.zip 
+ 3273  2023-03-31 16:10:37 GMT (Fri) less level4_example.in level4_example.out
+ 3274  2023-03-31 16:10:44 GMT (Fri) cp -p rps3.awk rps4.awk 
+ 3275  2023-03-31 16:10:46 GMT (Fri) vim rps4.awk 
+ 3276  2023-03-31 16:13:39 GMT (Fri) l=4;for a in {1..5};do tr -d \\r < level${l}_$a.in|./rps$l.awk  > level${l}_$a.out;/bin/cp level${l}_$a.out /sdcard/;done;/bin/cp -p rps$l.awk /sdcard/
+ 3277  2023-03-31 16:14:14 GMT (Fri) fg
+ 3278  2023-03-31 16:14:23 GMT (Fri) c rps2.awk 
+ 3279  2023-03-31 16:14:28 GMT (Fri) head -1 level4_*in
+ 3280  2023-03-31 16:14:35 GMT (Fri) fg
+ 3281  2023-03-31 16:14:53 GMT (Fri) cp -p rps2.awk rps2_to_the_end.awk 
+ 3282  2023-03-31 16:14:55 GMT (Fri) vim rps2_to_the_end.awk 
+ 3283  2023-03-31 16:15:49 GMT (Fri) for a in level3*out;do cat $a|./rps2_to_the_end.awk |grep -v S;done
+ 3284  2023-03-31 16:15:56 GMT (Fri) l=4
+ 3285  2023-03-31 16:17:16 GMT (Fri) ls -trl /sdcard/
+ 3286  2023-03-31 16:18:02 GMT (Fri) l=4;for a in {1..5};do tr -d \\r < level${l}_$a.in|./rps$l.awk  > level${l}_$a.out;/bin/cp level${l}_$a.out /sdcard/;done;/bin/cp -p rps$l.awk /sdcard/
+ 3287  2023-03-31 16:18:04 GMT (Fri) fg
+ 3288  2023-03-31 16:18:17 GMT (Fri) for a in level$l*out;do cat $a|./rps2_to_the_end.awk |grep -v S;done
+ 3289  2023-03-31 16:18:32 GMT (Fri) for a in level$l*out;do cat $a|./rps2_to_the_end.awk ;done
+ 3290  2023-03-31 16:18:37 GMT (Fri) fg
+ 3291  2023-03-31 16:20:32 GMT (Fri) l=4;for a in {1..5};do tr -d \\r < level${l}_$a.in|./rps$l.awk  > level${l}_$a.out;/bin/cp level${l}_$a.out /sdcard/;done;/bin/cp -p rps$l.awk /sdcard/
+ 3292  2023-03-31 16:20:34 GMT (Fri) for a in level$l*out;do cat $a|./rps2_to_the_end.awk |grep -v S;done
+ 3293  2023-03-31 16:20:36 GMT (Fri) fg
+ 3294  2023-03-31 16:20:39 GMT (Fri) l=4;for a in {1..5};do tr -d \\r < level${l}_$a.in|./rps$l.awk  > level${l}_$a.out;/bin/cp level${l}_$a.out /sdcard/;done;/bin/cp -p rps$l.awk /sdcard/
+ 3295  2023-03-31 16:20:43 GMT (Fri) fg
+ 3296  2023-03-31 16:20:46 GMT (Fri) l=4;for a in {1..5};do tr -d \\r < level${l}_$a.in|./rps$l.awk  > level${l}_$a.out;/bin/cp level${l}_$a.out /sdcard/;done;/bin/cp -p rps$l.awk /sdcard/
+ 3297  2023-03-31 16:20:49 GMT (Fri) fg
+ 3298  2023-03-31 16:21:01 GMT (Fri) l=4;for a in {1..5};do tr -d \\r < level${l}_$a.in|./rps$l.awk  > level${l}_$a.out;/bin/cp level${l}_$a.out /sdcard/;done;/bin/cp -p rps$l.awk /sdcard/
+ 3299  2023-03-31 16:21:51 GMT (Fri) fg
+ 3300  2023-03-31 16:22:11 GMT (Fri) l=4;for a in {1..5};do tr -d \\r < level${l}_$a.in|./rps$l.awk  > level${l}_$a.out;/bin/cp level${l}_$a.out /sdcard/;done;/bin/cp -p rps$l.awk /sdcard/
+ 3301  2023-03-31 16:22:16 GMT (Fri) fg
+ 3302  2023-03-31 16:25:07 GMT (Fri) cp -p rps3.awk rps4.awk 
+ 3303  2023-03-31 16:25:09 GMT (Fri) vim rps2_to_the_end.awk 
+ 3304  2023-03-31 16:25:17 GMT (Fri) vim rps4.awk 
+ 3305  2023-03-31 16:26:30 GMT (Fri) cp -p rps3.awk rps4.awk 
+ 3306  2023-03-31 16:26:31 GMT (Fri) vim rps4.awk 
+ 3307  2023-03-31 16:27:48 GMT (Fri) for a in level$l*out;do cat $a|./rps2_to_the_end.awk |grep -v S;done
+ 3308  2023-03-31 16:27:53 GMT (Fri) v *out
+ 3309  2023-03-31 16:27:58 GMT (Fri) l=4;for a in {1..5};do tr -d \\r < level${l}_$a.in|./rps$l.awk  > level${l}_$a.out;/bin/cp level${l}_$a.out /sdcard/;done;/bin/cp -p rps$l.awk /sdcard/
+ 3310  2023-03-31 16:27:59 GMT (Fri) v *out
+ 3311  2023-03-31 16:28:01 GMT (Fri) for a in level$l*out;do cat $a|./rps2_to_the_end.awk |grep -v S;done
+ 3312  2023-03-31 16:28:24 GMT (Fri) ./rps4.awk  < level4_example.
+ 3313  2023-03-31 16:28:25 GMT (Fri) ./rps4.awk  < level4_example.in 
+ 3314  2023-03-31 16:28:28 GMT (Fri) cat level4_example.out 
+ 3315  2023-03-31 16:28:38 GMT (Fri) ./rps4.awk  < level4_example.in |./rps2_to_the_end.awk 
+ 3316  2023-03-31 16:28:48 GMT (Fri) (echo;./rps4.awk  < level4_example.in )|./rps2_to_the_end.awk 
+ 3317  2023-03-31 16:28:55 GMT (Fri) c level4_example.in
+ 3318  2023-03-31 16:29:06 GMT (Fri) (echo;./rps4.awk  < level4_example.in )
+ 3319  2023-03-31 16:29:16 GMT (Fri) vim rps4.awk 
+ 3320  2023-03-31 16:29:28 GMT (Fri) (echo;./rps4.awk  < level4_example.in )
+ 3321  2023-03-31 16:29:30 GMT (Fri) fg
+ 3322  2023-03-31 16:31:04 GMT (Fri) l=4;for a in {1..5};do tr -d \\r < level${l}_$a.in|./rps$l.awk  > level${l}_$a.out;/bin/cp level${l}_$a.out /sdcard/;done;/bin/cp -p rps$l.awk /sdcard/
+ 3323  2023-03-31 16:31:06 GMT (Fri) for a in level$l*out;do cat $a|./rps2_to_the_end.awk |grep -v S;done
+ 3324  2023-03-31 16:31:08 GMT (Fri) fg
+ 3325  2023-03-31 16:31:10 GMT (Fri) l=4;for a in {1..5};do tr -d \\r < level${l}_$a.in|./rps$l.awk  > level${l}_$a.out;/bin/cp level${l}_$a.out /sdcard/;done;/bin/cp -p rps$l.awk /sdcard/
+ 3326  2023-03-31 16:31:12 GMT (Fri) v -tr
+ 3327  2023-03-31 16:31:17 GMT (Fri) for a in level$l*out;do cat $a|./rps2_to_the_end.awk |grep -v S;done
+ 3328  2023-03-31 16:31:20 GMT (Fri) (echo;./rps4.awk  < level4_example.in )
+ 3329  2023-03-31 16:31:24 GMT (Fri) (echo;./rps4.awk  < level4_example.in )|./rps2_to_the_end.awk 
+ 3330  2023-03-31 16:32:49 GMT (Fri) fg
+ 3331  2023-03-31 16:35:38 GMT (Fri) l=4;for a in {1..5};do tr -d \\r < level${l}_$a.in|./rps$l.awk  > level${l}_$a.out;/bin/cp level${l}_$a.out /sdcard/;done;/bin/cp -p rps$l.awk /sdcard/
+ 3332  2023-03-31 16:35:39 GMT (Fri) for a in level$l*out;do cat $a|./rps2_to_the_end.awk |grep -v S;done
+ 3333  2023-03-31 16:35:43 GMT (Fri) fg
+ 3334  2023-03-31 16:36:44 GMT (Fri) l=4;for a in {1..5};do tr -d \\r < level${l}_$a.in|./rps$l.awk  > level${l}_$a.out;/bin/cp level${l}_$a.out /sdcard/;done;/bin/cp -p rps$l.awk /sdcard/
+ 3335  2023-03-31 16:36:45 GMT (Fri) for a in level$l*out;do cat $a|./rps2_to_the_end.awk |grep -v S;done
+ 3336  2023-03-31 16:36:47 GMT (Fri) v -tr-
+ 3337  2023-03-31 16:36:49 GMT (Fri) v -rt
+ 3338  2023-03-31 16:36:53 GMT (Fri) for a in level$l*out;do cat $a|./rps2_to_the_end.awk |grep -v S;done
+ 3339  2023-03-31 16:36:58 GMT (Fri) for a in level$l*out;do cat $a|./rps2_to_the_end.awk |grep -v S;done|wc
+ 3340  2023-03-31 16:37:01 GMT (Fri) fg
+ 3341  2023-03-31 16:41:28 GMT (Fri) head -1 level4_*in
+ 3342  2023-03-31 16:41:35 GMT (Fri) fg
+ 3343  2023-03-31 16:50:57 GMT (Fri) l=4;for a in {1..5};do tr -d \\r < level${l}_$a.in|./rps$l.awk  > level${l}_$a.out;/bin/cp level${l}_$a.out /sdcard/;done;/bin/cp -p rps$l.awk /sdcard/
+ 3344  2023-03-31 16:50:59 GMT (Fri) cp -p rps3.awk rps4.awk 
+ 3345  2023-03-31 16:51:02 GMT (Fri) vim rps4.awk 
+ 3346  2023-03-31 16:52:07 GMT (Fri) fg
+ 3347  2023-03-31 16:52:12 GMT (Fri) cp -p rps3.awk rps4.awk 
+ 3348  2023-03-31 16:52:15 GMT (Fri) l=4;for a in {1..5};do tr -d \\r < level${l}_$a.in|./rps$l.awk  > level${l}_$a.out;/bin/cp level${l}_$a.out /sdcard/;done;/bin/cp -p rps$l.awk /sdcard/
+ 3349  2023-03-31 16:52:17 GMT (Fri) for a in level$l*out;do cat $a|./rps2_to_the_end.awk |grep -v S;done|wc
+ 3350  2023-03-31 16:52:21 GMT (Fri) fg
+ 3351  2023-03-31 16:52:23 GMT (Fri) (echo;./rps4.awk  < level4_example.in )|./rps2_to_the_end.awk 
+ 3352  2023-03-31 16:52:28 GMT (Fri) (echo;./rps4.awk  < level4_example.in )
+ 3353  2023-03-31 16:52:38 GMT (Fri) fg
+ 3354  2023-03-31 16:52:42 GMT (Fri) l=4;for a in {1..5};do tr -d \\r < level${l}_$a.in|./rps$l.awk  > level${l}_$a.out;/bin/cp level${l}_$a.out /sdcard/;done;/bin/cp -p rps$l.awk /sdcard/
+ 3355  2023-03-31 16:52:44 GMT (Fri) for a in level$l*out;do cat $a|./rps2_to_the_end.awk |grep -v S;done|wc
+ 3356  2023-03-31 16:52:46 GMT (Fri) (echo;./rps4.awk  < level4_example.in )
+ 3357  2023-03-31 16:52:49 GMT (Fri) (echo;./rps4.awk  < level4_example.in )|./rps2_to_the_end.awk 
+ 3358  2023-03-31 16:52:52 GMT (Fri) fg
+ 3359  2023-03-31 16:53:03 GMT (Fri) (echo;./rps4.awk  < level4_example.in )|./rps2_to_the_end.awk 
+ 3360  2023-03-31 16:53:08 GMT (Fri) (echo;./rps4.awk  < level4_example.in )
+ 3361  2023-03-31 16:53:20 GMT (Fri) fg
+ 3362  2023-03-31 16:53:26 GMT (Fri) (echo;./rps4.awk  < level4_example.in )
+ 3363  2023-03-31 16:53:27 GMT (Fri) l=4;for a in {1..5};do tr -d \\r < level${l}_$a.in|./rps$l.awk  > level${l}_$a.out;/bin/cp level${l}_$a.out /sdcard/;done;/bin/cp -p rps$l.awk /sdcard/
+ 3364  2023-03-31 16:53:29 GMT (Fri) for a in level$l*out;do cat $a|./rps2_to_the_end.awk |grep -v S;done|wc
+ 3365  2023-03-31 16:53:32 GMT (Fri) (echo;./rps4.awk  < level4_example.in )
+ 3366  2023-03-31 16:53:35 GMT (Fri) (echo;./rps4.awk  < level4_example.in )|./rps2_to_the_end.awk 
+ 3367  2023-03-31 16:53:43 GMT (Fri) fg
+ 3368  2023-03-31 16:54:01 GMT (Fri) l=4;for a in {1..5};do tr -d \\r < level${l}_$a.in|./rps$l.awk  > level${l}_$a.out;/bin/cp level${l}_$a.out /sdcard/;done;/bin/cp -p rps$l.awk /sdcard/
+ 3369  2023-03-31 16:54:03 GMT (Fri) (echo;./rps4.awk  < level4_example.in )|./rps2_to_the_end.awk 
+ 3370  2023-03-31 16:54:05 GMT (Fri) (echo;./rps4.awk  < level4_example.in )
+ 3371  2023-03-31 16:54:28 GMT (Fri) ./rps2_oneround.awk 
+ 3372  2023-04-01 13:53:14 GMT (Sat) git log
+ 3373  2023-04-01 13:53:23 GMT (Sat) history > history
